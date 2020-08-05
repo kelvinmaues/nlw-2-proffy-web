@@ -2,16 +2,38 @@ import React from "react";
 // assets
 import logoImg from "../../assets/images/logo.svg";
 import landingImg from "../../assets/images/landing.svg";
+import studyImg from "../../assets/images/icons/study.svg";
+import giveClassesImg from "../../assets/images/icons/give-classes.svg";
+import purpleHeartImg from "../../assets/images/icons/purple-heart.svg";
+// style
+import "./styles.css";
 
 const Landing = () => {
   return (
     <div id="page-landing">
-      <div className="page-landing-content container">
+      <div id="page-landing-content" className="container">
         <div className="logo-container">
           <img src={logoImg} alt="Proffy logo" />
           <h2>Sua plataforma de estudos online.</h2>
-          <img src={landingImg} alt="Landing" className="hero-image" />
         </div>
+
+        <img src={landingImg} alt="Landing" className="hero-image" />
+
+        <div className="buttons-container">
+          <a href="/#" className="study">
+            <img src={studyImg} alt="Estudar" />
+            Estudar
+          </a>
+          <a href="/#" className="give-classes">
+            <img src={giveClassesImg} alt="Dar aulas" />
+            Dar aulas
+          </a>
+        </div>
+
+        <span className="total-connections">
+          Total de 200 conexões já realizadas
+          <img src={purpleHeartImg} alt="Coração roxo" />
+        </span>
       </div>
     </div>
   );
