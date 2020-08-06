@@ -1,26 +1,34 @@
 import React from "react";
-import { Link } from "react-router-dom";
-// assets
-import backIcon from "../../assets/images/icons/back.svg";
-import logoImg from "../../assets/images/logo.svg";
+// global components
+import PageHeader from "../../components/PageHeader";
+import TeacherItem from "../../components/TeacherItem";
 // styles
 import "./style.css";
 
 const TeacherList = () => {
   return (
     <div id="page-teacher-list" className="container">
-      <header className="page-header">
-        <div className="top-bar-container">
-          <Link to="/">
-            <img src={backIcon} alt="Voltar" />
-          </Link>
-          <img src={logoImg} alt="Proffy" />
-        </div>
-
-        <div className="header-content">
-          <strong>Estes sãos os proffys disponíveis.</strong>
-        </div>
-      </header>
+      <PageHeader title="Estes sãos os proffys disponíveis.">
+        <form id="search-teachers">
+          <div className="input-block">
+            <label htmlFor="subject">Matéria</label>
+            <input type="text" id="subject" />
+          </div>
+          <div className="input-block">
+            <label htmlFor="subject">Matéria</label>
+            <input type="text" id="subject" />
+          </div>
+          <div className="input-block">
+            <label htmlFor="subject">Matéria</label>
+            <input type="text" id="subject" />
+          </div>
+        </form>
+      </PageHeader>
+      <main>
+        <TeacherItem />
+        <TeacherItem />
+        <TeacherItem />
+      </main>
     </div>
   );
 };
